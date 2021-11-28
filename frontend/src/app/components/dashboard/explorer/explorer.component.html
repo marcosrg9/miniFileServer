@@ -1,0 +1,17 @@
+<div *ngIf="this.elements && this.elements.length > 0" class="fadeIn">
+    <div id="dirs">
+        <!-- <a href="http://localhost:3000/api/download">Test</a> -->
+        <div *ngFor="let el of this.elements | elTypeFilter:'dir'"
+            (click)="files.list(el.pathData.dir + '/' + el.pathData.base + '/')">
+            <img class="folderImg" src="../../../../assets/folder.svg">
+            <div>{{ el.pathData.name }}</div>
+        </div>
+    </div>
+    <div id="files">
+        <div *ngFor="let el of this.elements | elTypeFilter:'file'" (click)="download(el)">
+            <div id="name">{{ el.pathData.name }}</div>
+            <div *ngIf="el.status">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div id="queue" *ngIf="downloads && downloads.length > 0">
+    <!-- <h6 style="margin: 0px 30px 0px 0px">Cola de descargas</h6>
+    <hr style="border-bottom: 0px; border-top: 1px solid rgba(0, 0, 0, .2);"> -->
+    <div class="download" *ngFor="let file of downloads">
+        <span>{{ file.pathData.base }}</span>
+    </div>
+</div>

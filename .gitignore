@@ -1,0 +1,9 @@
+.vscode
+.DS_Store
+node_modules
+users.database.json
+uploads/*
+!uploads/.gitkeep
+src/public/*
+!src/public/.gitkeep
+*.js
